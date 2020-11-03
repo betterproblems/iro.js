@@ -5,7 +5,7 @@
  * github.com/jaames/iro.js
  */
 
-var n,u,t,i,r,o,f={},e=[],c=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|^--/i;function s(n,l){for(var u in l){ n[u]=l[u]; }return n}function a(n){var l=n.parentNode;l&&l.removeChild(n);}function h(n,l,u){var t,i,r,o,f=arguments;if(l=s({},l),arguments.length>3){ for(u=[u],t=3;t<arguments.length;t++){ u.push(f[t]); } }if(null!=u&&(l.children=u),null!=n&&null!=n.defaultProps){ for(i in n.defaultProps){ void 0===l[i]&&(l[i]=n.defaultProps[i]); } }return o=l.key,null!=(r=l.ref)&&delete l.ref,null!=o&&delete l.key,v(n,l,o,r)}function v(l,u,t,i){var r={type:l,props:u,key:t,ref:i,__k:null,__p:null,__b:0,__e:null,l:null,__c:null,constructor:void 0};return n.vnode&&n.vnode(r),r}function d(n){return n.children}function y(n){if(null==n||"boolean"==typeof n){ return null; }if("string"==typeof n||"number"==typeof n){ return v(null,n,null,null); }if(null!=n.__e||null!=n.__c){var l=v(n.type,n.props,n.key,null);return l.__e=n.__e,l}return n}function m(n,l){this.props=n,this.context=l;}function w(n,l){if(null==l){ return n.__p?w(n.__p,n.__p.__k.indexOf(n)+1):null; }for(var u;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){ return u.__e; } }return "function"==typeof n.type?w(n):null}function g(n){var l,u;if(null!=(n=n.__p)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break} }return g(n)}}function k(l){(!l.__d&&(l.__d=!0)&&1===u.push(l)||i!==n.debounceRendering)&&(i=n.debounceRendering,(n.debounceRendering||t)(_));}function _(){var n,l,t,i,r,o,f,e;for(u.sort(function(n,l){return l.__v.__b-n.__v.__b});n=u.pop();){ n.__d&&(t=void 0,i=void 0,o=(r=(l=n).__v).__e,f=l.__P,e=l.u,l.u=!1,f&&(t=[],i=$(f,r,s({},r),l.__n,void 0!==f.ownerSVGElement,null,t,e,null==o?w(r):o),j(t,r),i!=o&&g(r))); }}function b(n,l,u,t,i,r,o,c,s){var h,v,p,d,y,m,g,k=u&&u.__k||e,_=k.length;if(c==f&&(c=null!=r?r[0]:_?w(u,0):null),h=0,l.__k=x(l.__k,function(u){if(null!=u){if(u.__p=l,u.__b=l.__b+1,null===(p=k[h])||p&&u.key==p.key&&u.type===p.type){ k[h]=void 0; }else { for(v=0;v<_;v++){if((p=k[v])&&u.key==p.key&&u.type===p.type){k[v]=void 0;break}p=null;} }if(d=$(n,u,p=p||f,t,i,r,o,null,c,s),(v=u.ref)&&p.ref!=v&&(g||(g=[])).push(v,u.__c||d,u),null!=d){if(null==m&&(m=d),null!=u.l){ d=u.l,u.l=null; }else if(r==p||d!=c||null==d.parentNode){n:if(null==c||c.parentNode!==n){ n.appendChild(d); }else{for(y=c,v=0;(y=y.nextSibling)&&v<_;v+=2){ if(y==d){ break n; } }n.insertBefore(d,c);}"option"==l.type&&(n.value="");}c=d.nextSibling,"function"==typeof l.type&&(l.l=d);}}return h++,u}),l.__e=m,null!=r&&"function"!=typeof l.type){ for(h=r.length;h--;){ null!=r[h]&&a(r[h]); } }for(h=_;h--;){ null!=k[h]&&D(k[h],k[h]); }if(g){ for(h=0;h<g.length;h++){ A(g[h],g[++h],g[++h]); } }}function x(n,l,u){if(null==u&&(u=[]),null==n||"boolean"==typeof n){ l&&u.push(l(null)); }else if(Array.isArray(n)){ for(var t=0;t<n.length;t++){ x(n[t],l,u); } }else { u.push(l?l(y(n)):n); }return u}function C(n,l,u,t,i){var r;for(r in u){ r in l||N(n,r,null,u[r],t); }for(r in l){ i&&"function"!=typeof l[r]||"value"===r||"checked"===r||u[r]===l[r]||N(n,r,l[r],u[r],t); }}function P(n,l,u){"-"===l[0]?n.setProperty(l,u):n[l]="number"==typeof u&&!1===c.test(l)?u+"px":null==u?"":u;}function N(n,l,u,t,i){var r,o,f,e,c;if("key"===(l=i?"className"===l?"class":l:"class"===l?"className":l)||"children"===l);else if("style"===l){ if(r=n.style,"string"==typeof u){ r.cssText=u; }else{if("string"==typeof t&&(r.cssText="",t=null),t){ for(o in t){ u&&o in u||P(r,o,""); } }if(u){ for(f in u){ t&&u[f]===t[f]||P(r,f,u[f]); } }} }else{ "o"===l[0]&&"n"===l[1]?(e=l!==(l=l.replace(/Capture$/,"")),c=l.toLowerCase(),l=(c in n?c:l).slice(2),u?(t||n.addEventListener(l,T,e),(n.t||(n.t={}))[l]=u):n.removeEventListener(l,T,e)):"list"!==l&&"tagName"!==l&&"form"!==l&&!i&&l in n?n[l]=null==u?"":u:"function"!=typeof u&&"dangerouslySetInnerHTML"!==l&&(l!==(l=l.replace(/^xlink:?/,""))?null==u||!1===u?n.removeAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase()):n.setAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase(),u):null==u||!1===u?n.removeAttribute(l):n.setAttribute(l,u)); }}function T(l){return this.t[l.type](n.event?n.event(l):l)}function $(l,u,t,i,r,o,f,e,c,a){var h,v,p,y,w,g,k,_,C,P,N=u.type;if(void 0!==u.constructor){ return null; }(h=n.__b)&&h(u);try{n:if("function"==typeof N){if(_=u.props,C=(h=N.contextType)&&i[h.__c],P=h?C?C.props.value:h.__p:i,t.__c?k=(v=u.__c=t.__c).__p=v.__E:("prototype"in N&&N.prototype.render?u.__c=v=new N(_,P):(u.__c=v=new m(_,P),v.constructor=N,v.render=H),C&&C.sub(v),v.props=_,v.state||(v.state={}),v.context=P,v.__n=i,p=v.__d=!0,v.__h=[]),null==v.__s&&(v.__s=v.state),null!=N.getDerivedStateFromProps&&s(v.__s==v.state?v.__s=s({},v.__s):v.__s,N.getDerivedStateFromProps(_,v.__s)),p){ null==N.getDerivedStateFromProps&&null!=v.componentWillMount&&v.componentWillMount(),null!=v.componentDidMount&&f.push(v); }else{if(null==N.getDerivedStateFromProps&&null==e&&null!=v.componentWillReceiveProps&&v.componentWillReceiveProps(_,P),!e&&null!=v.shouldComponentUpdate&&!1===v.shouldComponentUpdate(_,v.__s,P)){for(v.props=_,v.state=v.__s,v.__d=!1,v.__v=u,u.__e=null!=c?c!==t.__e?c:t.__e:null,u.__k=t.__k,h=0;h<u.__k.length;h++){ u.__k[h]&&(u.__k[h].__p=u); }break n}null!=v.componentWillUpdate&&v.componentWillUpdate(_,v.__s,P);}for(y=v.props,w=v.state,v.context=P,v.props=_,v.state=v.__s,(h=n.__r)&&h(u),v.__d=!1,v.__v=u,v.__P=l,h=v.render(v.props,v.state,v.context),u.__k=x(null!=h&&h.type==d&&null==h.key?h.props.children:h),null!=v.getChildContext&&(i=s(s({},i),v.getChildContext())),p||null==v.getSnapshotBeforeUpdate||(g=v.getSnapshotBeforeUpdate(y,w)),b(l,u,t,i,r,o,f,c,a),v.base=u.__e;h=v.__h.pop();){ v.__s&&(v.state=v.__s),h.call(v); }p||null==y||null==v.componentDidUpdate||v.componentDidUpdate(y,w,g),k&&(v.__E=v.__p=null);}else { u.__e=z(t.__e,u,t,i,r,o,f,a); }(h=n.diffed)&&h(u);}catch(l){n.__e(l,u,t);}return u.__e}function j(l,u){for(var t;t=l.pop();){ try{t.componentDidMount();}catch(l){n.__e(l,t.__v);} }n.__c&&n.__c(u);}function z(n,l,u,t,i,r,o,c){var s,a,h,v,p=u.props,d=l.props;if(i="svg"===l.type||i,null==n&&null!=r){ for(s=0;s<r.length;s++){ if(null!=(a=r[s])&&(null===l.type?3===a.nodeType:a.localName===l.type)){n=a,r[s]=null;break} } }if(null==n){if(null===l.type){ return document.createTextNode(d); }n=i?document.createElementNS("http://www.w3.org/2000/svg",l.type):document.createElement(l.type),r=null;}return null===l.type?p!==d&&(null!=r&&(r[r.indexOf(n)]=null),n.data=d):l!==u&&(null!=r&&(r=e.slice.call(n.childNodes)),h=(p=u.props||f).dangerouslySetInnerHTML,v=d.dangerouslySetInnerHTML,c||(v||h)&&(v&&h&&v.__html==h.__html||(n.innerHTML=v&&v.__html||"")),C(n,d,p,i,c),l.__k=l.props.children,v||b(n,l,u,t,"foreignObject"!==l.type&&i,r,o,f,c),c||("value"in d&&void 0!==d.value&&d.value!==n.value&&(n.value=null==d.value?"":d.value),"checked"in d&&void 0!==d.checked&&d.checked!==n.checked&&(n.checked=d.checked))),n}function A(l,u,t){try{"function"==typeof l?l(u):l.current=u;}catch(l){n.__e(l,t);}}function D(l,u,t){var i,r,o;if(n.unmount&&n.unmount(l),(i=l.ref)&&A(i,null,u),t||"function"==typeof l.type||(t=null!=(r=l.__e)),l.__e=l.l=null,null!=(i=l.__c)){if(i.componentWillUnmount){ try{i.componentWillUnmount();}catch(l){n.__e(l,u);} }i.base=i.__P=null;}if(i=l.__k){ for(o=0;o<i.length;o++){ i[o]&&D(i[o],u,t); } }null!=r&&a(r);}function H(n,l,u){return this.constructor(n,u)}function I(l,u,t){var i,o,c;n.__p&&n.__p(l,u),o=(i=t===r)?null:t&&t.__k||u.__k,l=h(d,null,[l]),c=[],$(u,i?u.__k=l:(t||u).__k=l,o||f,f,void 0!==u.ownerSVGElement,t&&!i?[t]:o?null:e.slice.call(u.childNodes),c,!1,t||f,i),j(c,l);}n={},m.prototype.setState=function(n,l){var u=this.__s!==this.state&&this.__s||(this.__s=s({},this.state));("function"!=typeof n||(n=n(u,this.props)))&&s(u,n),null!=n&&this.__v&&(this.u=!1,l&&this.__h.push(l),k(this));},m.prototype.forceUpdate=function(n){this.__v&&(n&&this.__h.push(n),this.u=!0,k(this));},m.prototype.render=d,u=[],t="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,i=n.debounceRendering,n.__e=function(n,l,u){for(var t;l=l.__p;){ if((t=l.__c)&&!t.__p){ try{if(t.constructor&&null!=t.constructor.getDerivedStateFromError){ t.setState(t.constructor.getDerivedStateFromError(n)); }else{if(null==t.componentDidCatch){ continue; }t.componentDidCatch(n);}return k(t.__E=t)}catch(l){n=l;} } }throw n},r=f,o=0;
+var n,u,i,t,o,r,f={},e=[],c=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;function s(n,l){for(var u in l){ n[u]=l[u]; }return n}function a(n){var l=n.parentNode;l&&l.removeChild(n);}function h(n,l,u){var i,t,o,r=arguments,f={};for(o in l){ "key"==o?i=l[o]:"ref"==o?t=l[o]:f[o]=l[o]; }if(arguments.length>3){ for(u=[u],o=3;o<arguments.length;o++){ u.push(r[o]); } }if(null!=u&&(f.children=u),"function"==typeof n&&null!=n.defaultProps){ for(o in n.defaultProps){ void 0===f[o]&&(f[o]=n.defaultProps[o]); } }return v(n,f,i,t,null)}function v(l,u,i,t,o){var r={type:l,props:u,key:i,ref:t,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:o};return null==o&&(r.__v=r),null!=n.vnode&&n.vnode(r),r}function p(n){return n.children}function d(n,l){this.props=n,this.context=l;}function _(n,l){if(null==l){ return n.__?_(n.__,n.__.__k.indexOf(n)+1):null; }for(var u;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){ return u.__e; } }return "function"==typeof n.type?_(n):null}function w(n){var l,u;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break} }return w(n)}}function k(l){(!l.__d&&(l.__d=!0)&&u.push(l)&&!g.__r++||t!==n.debounceRendering)&&((t=n.debounceRendering)||i)(g);}function g(){for(var n;g.__r=u.length;){ n=u.sort(function(n,l){return n.__v.__b-l.__v.__b}),u=[],n.some(function(n){var l,u,i,t,o,r,f;n.__d&&(r=(o=(l=n).__v).__e,(f=l.__P)&&(u=[],(i=s({},o)).__v=i,t=$(f,o,i,l.__n,void 0!==f.ownerSVGElement,null!=o.__h?[r]:null,u,null==r?_(o):r,o.__h),j(u,o),t!=r&&w(o)));}); }}function m(n,l,u,i,t,o,r,c,s,h){var y,d,w,k,g,m,b,A=i&&i.__k||e,P=A.length;for(s==f&&(s=null!=r?r[0]:P?_(i,0):null),u.__k=[],y=0;y<l.length;y++){ if(null!=(k=u.__k[y]=null==(k=l[y])||"boolean"==typeof k?null:"string"==typeof k||"number"==typeof k?v(null,k,null,null,k):Array.isArray(k)?v(p,{children:k},null,null,null):null!=k.__e||null!=k.__c?v(k.type,k.props,k.key,null,k.__v):k)){if(k.__=u,k.__b=u.__b+1,null===(w=A[y])||w&&k.key==w.key&&k.type===w.type){ A[y]=void 0; }else { for(d=0;d<P;d++){if((w=A[d])&&k.key==w.key&&k.type===w.type){A[d]=void 0;break}w=null;} }g=$(n,k,w=w||f,t,o,r,c,s,h),(d=k.ref)&&w.ref!=d&&(b||(b=[]),w.ref&&b.push(w.ref,null,k),b.push(d,k.__c||g,k)),null!=g?(null==m&&(m=g),s=x(n,k,w,A,r,g,s),h||"option"!=u.type?"function"==typeof u.type&&(u.__d=s):n.value=""):s&&w.__e==s&&s.parentNode!=n&&(s=_(w));} }if(u.__e=m,null!=r&&"function"!=typeof u.type){ for(y=r.length;y--;){ null!=r[y]&&a(r[y]); } }for(y=P;y--;){ null!=A[y]&&L(A[y],A[y]); }if(b){ for(y=0;y<b.length;y++){ I(b[y],b[++y],b[++y]); } }}function x(n,l,u,i,t,o,r){var f,e,c;if(void 0!==l.__d){ f=l.__d,l.__d=void 0; }else if(t==u||o!=r||null==o.parentNode){ n:if(null==r||r.parentNode!==n){ n.appendChild(o),f=null; }else {for(e=r,c=0;(e=e.nextSibling)&&c<i.length;c+=2){ if(e==o){ break n; } }n.insertBefore(o,r),f=r;} }return void 0!==f?f:o.nextSibling}function A(n,l,u,i,t){var o;for(o in u){ "children"===o||"key"===o||o in l||C(n,o,null,u[o],i); }for(o in l){ t&&"function"!=typeof l[o]||"children"===o||"key"===o||"value"===o||"checked"===o||u[o]===l[o]||C(n,o,l[o],u[o],i); }}function P(n,l,u){"-"===l[0]?n.setProperty(l,u):n[l]=null==u?"":"number"!=typeof u||c.test(l)?u:u+"px";}function C(n,l,u,i,t){var o,r,f;if(t&&"className"==l&&(l="class"),"style"===l){ if("string"==typeof u){ n.style.cssText=u; }else {if("string"==typeof i&&(n.style.cssText=i=""),i){ for(l in i){ u&&l in u||P(n.style,l,""); } }if(u){ for(l in u){ i&&u[l]===i[l]||P(n.style,l,u[l]); } }} }else { "o"===l[0]&&"n"===l[1]?(o=l!==(l=l.replace(/Capture$/,"")),(r=l.toLowerCase())in n&&(l=r),l=l.slice(2),n.l||(n.l={}),n.l[l+o]=u,f=o?N:z,u?i||n.addEventListener(l,f,o):n.removeEventListener(l,f,o)):"list"!==l&&"tagName"!==l&&"form"!==l&&"type"!==l&&"size"!==l&&"download"!==l&&"href"!==l&&!t&&l in n?n[l]=null==u?"":u:"function"!=typeof u&&"dangerouslySetInnerHTML"!==l&&(l!==(l=l.replace(/xlink:?/,""))?null==u||!1===u?n.removeAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase()):n.setAttributeNS("http://www.w3.org/1999/xlink",l.toLowerCase(),u):null==u||!1===u&&!/^ar/.test(l)?n.removeAttribute(l):n.setAttribute(l,u)); }}function z(l){this.l[l.type+!1](n.event?n.event(l):l);}function N(l){this.l[l.type+!0](n.event?n.event(l):l);}function T(n,l,u){var i,t;for(i=0;i<n.__k.length;i++){ (t=n.__k[i])&&(t.__=n,t.__e&&("function"==typeof t.type&&t.__k.length>1&&T(t,l,u),l=x(u,t,t,n.__k,null,t.__e,l),"function"==typeof n.type&&(n.__d=l))); }}function $(l,u,i,t,o,r,f,e,c){var a,h,v,y,_,w,k,g,b,x,A,P=u.type;if(void 0!==u.constructor){ return null; }null!=i.__h&&(c=i.__h,e=u.__e=i.__e,u.__h=null,r=[e]),(a=n.__b)&&a(u);try{n:if("function"==typeof P){if(g=u.props,b=(a=P.contextType)&&t[a.__c],x=a?b?b.props.value:a.__:t,i.__c?k=(h=u.__c=i.__c).__=h.__E:("prototype"in P&&P.prototype.render?u.__c=h=new P(g,x):(u.__c=h=new d(g,x),h.constructor=P,h.render=M),b&&b.sub(h),h.props=g,h.state||(h.state={}),h.context=x,h.__n=t,v=h.__d=!0,h.__h=[]),null==h.__s&&(h.__s=h.state),null!=P.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=s({},h.__s)),s(h.__s,P.getDerivedStateFromProps(g,h.__s))),y=h.props,_=h.state,v){ null==P.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),null!=h.componentDidMount&&h.__h.push(h.componentDidMount); }else {if(null==P.getDerivedStateFromProps&&g!==y&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(g,x),!h.__e&&null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(g,h.__s,x)||u.__v===i.__v){h.props=g,h.state=h.__s,u.__v!==i.__v&&(h.__d=!1),h.__v=u,u.__e=i.__e,u.__k=i.__k,h.__h.length&&f.push(h),T(u,e,l);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(g,h.__s,x),null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(y,_,w);});}h.context=x,h.props=g,h.state=h.__s,(a=n.__r)&&a(u),h.__d=!1,h.__v=u,h.__P=l,a=h.render(h.props,h.state,h.context),h.state=h.__s,null!=h.getChildContext&&(t=s(s({},t),h.getChildContext())),v||null==h.getSnapshotBeforeUpdate||(w=h.getSnapshotBeforeUpdate(y,_)),A=null!=a&&a.type==p&&null==a.key?a.props.children:a,m(l,Array.isArray(A)?A:[A],u,i,t,o,r,f,e,c),h.base=u.__e,u.__h=null,h.__h.length&&f.push(h),k&&(h.__E=h.__=null),h.__e=!1;}else { null==r&&u.__v===i.__v?(u.__k=i.__k,u.__e=i.__e):u.__e=H(i.__e,u,i,t,o,r,f,c); }(a=n.diffed)&&a(u);}catch(l$1){u.__v=null,(c||null!=r)&&(u.__e=e,u.__h=!!c,r[r.indexOf(e)]=null),n.__e(l$1,u,i);}return u.__e}function j(l,u){n.__c&&n.__c(u,l),l.some(function(u){try{l=u.__h,u.__h=[],l.some(function(n){n.call(u);});}catch(l$1){n.__e(l$1,u.__v);}});}function H(n,l,u,i,t,o,r,c){var s,a,h,v,y,p=u.props,d=l.props;if(t="svg"===l.type||t,null!=o){ for(s=0;s<o.length;s++){ if(null!=(a=o[s])&&((null===l.type?3===a.nodeType:a.localName===l.type)||n==a)){n=a,o[s]=null;break} } }if(null==n){if(null===l.type){ return document.createTextNode(d); }n=t?document.createElementNS("http://www.w3.org/2000/svg",l.type):document.createElement(l.type,d.is&&{is:d.is}),o=null,c=!1;}if(null===l.type){ p===d||c&&n.data===d||(n.data=d); }else {if(null!=o&&(o=e.slice.call(n.childNodes)),h=(p=u.props||f).dangerouslySetInnerHTML,v=d.dangerouslySetInnerHTML,!c){if(null!=o){ for(p={},y=0;y<n.attributes.length;y++){ p[n.attributes[y].name]=n.attributes[y].value; } }(v||h)&&(v&&(h&&v.__html==h.__html||v.__html===n.innerHTML)||(n.innerHTML=v&&v.__html||""));}A(n,d,p,t,c),v?l.__k=[]:(s=l.props.children,m(n,Array.isArray(s)?s:[s],l,u,i,"foreignObject"!==l.type&&t,o,r,f,c)),c||("value"in d&&void 0!==(s=d.value)&&(s!==n.value||"progress"===l.type&&!s)&&C(n,"value",s,p.value,!1),"checked"in d&&void 0!==(s=d.checked)&&s!==n.checked&&C(n,"checked",s,p.checked,!1));}return n}function I(l,u,i){try{"function"==typeof l?l(u):l.current=u;}catch(l$1){n.__e(l$1,i);}}function L(l,u,i){var t,o,r;if(n.unmount&&n.unmount(l),(t=l.ref)&&(t.current&&t.current!==l.__e||I(t,null,u)),i||"function"==typeof l.type||(i=null!=(o=l.__e)),l.__e=l.__d=void 0,null!=(t=l.__c)){if(t.componentWillUnmount){ try{t.componentWillUnmount();}catch(l$1){n.__e(l$1,u);} }t.base=t.__P=null;}if(t=l.__k){ for(r=0;r<t.length;r++){ t[r]&&L(t[r],u,i); } }null!=o&&a(o);}function M(n,l,u){return this.constructor(n,u)}function O(l,u,i){var t,r,c;n.__&&n.__(l,u),r=(t=i===o)?null:i&&i.__k||u.__k,l=h(p,null,[l]),c=[],$(u,(t?u:i||u).__k=l,r||f,f,void 0!==u.ownerSVGElement,i&&!t?[i]:r?null:u.childNodes.length?e.slice.call(u.childNodes):null,c,i||f,t),j(c,l);}n={__e:function(n,l){for(var u,i,t,o=l.__h;l=l.__;){ if((u=l.__c)&&!u.__){ try{if((i=u.constructor)&&null!=i.getDerivedStateFromError&&(u.setState(i.getDerivedStateFromError(n)),t=u.__d),null!=u.componentDidCatch&&(u.componentDidCatch(n),t=u.__d),t){ return l.__h=o,u.__E=u }}catch(l$1){n=l$1;} } }throw n}},d.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=s({},this.state),"function"==typeof n&&(n=n(s({},u),this.props)),n&&s(u,n),null!=n&&this.__v&&(l&&this.__h.push(l),k(this));},d.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),k(this));},d.prototype.render=p,u=[],i="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,g.__r=0,o=f,r=0;
 
 // Some regular expressions for rgb() and hsl() Colors are borrowed from tinyColor
 // https://github.com/bgrins/TinyColor
@@ -683,48 +683,6 @@ function getSliderDimensions(props) {
   }
 }
 /**
- * @desc Get the current slider value for a given color, as a percentage
- * @param props - slider props
- * @param color
- */
-
-function getCurrentSliderValue(props, color) {
-  var hsva = color.hsva;
-  var rgb = color.rgb;
-
-  switch (props.sliderType) {
-    case 'red':
-      return rgb.r / 2.55;
-
-    case 'green':
-      return rgb.g / 2.55;
-
-    case 'blue':
-      return rgb.b / 2.55;
-
-    case 'alpha':
-      return hsva.a * 100;
-
-    case 'kelvin':
-      var minTemperature = props.minTemperature;
-  var maxTemperature = props.maxTemperature;
-      var temperatureRange = maxTemperature - minTemperature;
-      var percent = (color.kelvin - minTemperature) / temperatureRange * 100; // clmap percentage
-
-      return Math.max(0, Math.min(percent, 100));
-
-    case 'hue':
-      return hsva.h /= 3.6;
-
-    case 'saturation':
-      return hsva.s;
-
-    case 'value':
-    default:
-      return hsva.v;
-  }
-}
-/**
  * @desc Get the current slider value from user input
  * @param props - slider props
  * @param x - global input x position
@@ -767,98 +725,6 @@ function getSliderValueFromInput(props, x, y) {
 
     default:
       return percent;
-  }
-}
-/**
- * @desc Get the current handle position for a given color
- * @param props - slider props
- * @param color
- */
-
-function getSliderHandlePosition(props, color) {
-  var ref = getSliderDimensions(props);
-  var width = ref.width;
-  var height = ref.height;
-  var handleRange = ref.handleRange;
-  var handleStart = ref.handleStart;
-  var ishorizontal = props.layoutDirection === 'horizontal';
-  var sliderValue = getCurrentSliderValue(props, color);
-  var midPoint = ishorizontal ? width / 2 : height / 2;
-  var handlePos = handleStart + sliderValue / 100 * handleRange;
-
-  if (ishorizontal) {
-    handlePos = -1 * handlePos + handleRange + handleStart * 2;
-  }
-
-  return {
-    x: ishorizontal ? midPoint : handlePos,
-    y: ishorizontal ? handlePos : midPoint
-  };
-}
-/**
- * @desc Get the gradient stops for a slider
- * @param props - slider props
- * @param color
- */
-
-function getSliderGradient(props, color) {
-  var hsv = color.hsv;
-  var rgb = color.rgb;
-
-  switch (props.sliderType) {
-    case 'red':
-      return [[0, ("rgb(" + (0) + "," + (rgb.g) + "," + (rgb.b) + ")")], [100, ("rgb(" + (255) + "," + (rgb.g) + "," + (rgb.b) + ")")]];
-
-    case 'green':
-      return [[0, ("rgb(" + (rgb.r) + "," + (0) + "," + (rgb.b) + ")")], [100, ("rgb(" + (rgb.r) + "," + (255) + "," + (rgb.b) + ")")]];
-
-    case 'blue':
-      return [[0, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (0) + ")")], [100, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (255) + ")")]];
-
-    case 'alpha':
-      return [[0, ("rgba(" + (rgb.r) + "," + (rgb.g) + "," + (rgb.b) + ",0)")], [100, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (rgb.b) + ")")]];
-
-    case 'kelvin':
-      var stops = [];
-      var min = props.minTemperature;
-      var max = props.maxTemperature;
-      var numStops = 8;
-      var range = max - min;
-
-      for (var kelvin = min, stop = 0; kelvin < max; kelvin += range / numStops, stop += 1) {
-        var ref = IroColor.kelvinToRgb(kelvin);
-        var r = ref.r;
-        var g = ref.g;
-        var b = ref.b;
-        stops.push([100 / numStops * stop, ("rgb(" + r + "," + g + "," + b + ")")]);
-      }
-
-      return stops;
-
-    case 'hue':
-      return [[0, '#f00'], [16.666, '#ff0'], [33.333, '#0f0'], [50, '#0ff'], [66.666, '#00f'], [83.333, '#f0f'], [100, '#f00']];
-
-    case 'saturation':
-      var noSat = IroColor.hsvToHsl({
-        h: hsv.h,
-        s: 0,
-        v: hsv.v
-      });
-      var fullSat = IroColor.hsvToHsl({
-        h: hsv.h,
-        s: 100,
-        v: hsv.v
-      });
-      return [[0, ("hsl(" + (noSat.h) + "," + (noSat.s) + "%," + (noSat.l) + "%)")], [100, ("hsl(" + (fullSat.h) + "," + (fullSat.s) + "%," + (fullSat.l) + "%)")]];
-
-    case 'value':
-    default:
-      var hsl = IroColor.hsvToHsl({
-        h: hsv.h,
-        s: hsv.s,
-        v: 100
-      });
-      return [[0, '#000'], [100, ("hsl(" + (hsl.h) + "," + (hsl.s) + "%," + (hsl.l) + "%)")]];
   }
 }
 /**
@@ -908,26 +774,6 @@ function translateWheelAngle(props, angle, invert) {
 
 
   return (angle % 360 + 360) % 360;
-}
-/**
- * @desc Get the current handle position for a given color
- * @param props - wheel props
- * @param color
- */
-
-function getWheelHandlePosition(props, color) {
-  var hsv = color.hsv;
-  var ref = getWheelDimensions(props);
-  var cx = ref.cx;
-  var cy = ref.cy;
-  var handleRange = props.width / 2 - props.padding - props.handleRadius - props.borderWidth;
-  var handleAngle = (180 + translateWheelAngle(props, hsv.h, true)) * (Math.PI / 180);
-  var handleDist = hsv.s / 100 * handleRange;
-  var direction = props.wheelDirection === 'clockwise' ? -1 : 1;
-  return {
-    x: cx + handleDist * Math.cos(handleAngle) * direction,
-    y: cy + handleDist * Math.sin(handleAngle) * direction
-  };
 }
 /**
  * @desc Get the current wheel value from user input
@@ -1144,7 +990,7 @@ var IroComponentBase = /*@__PURE__*/(function (Component) {
         if (props.index > 0) {
             rootStyles[isHorizontal ? 'marginLeft' : 'marginTop'] = margin;
         }
-        return (h(d, null, props.children(this.uid, rootProps, rootStyles)));
+        return (h(p, null, props.children(this.uid, rootProps, rootStyles)));
     };
     // More info on handleEvent:
     // https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38
@@ -1185,7 +1031,7 @@ var IroComponentBase = /*@__PURE__*/(function (Component) {
     };
 
     return IroComponentBase;
-}(m));
+}(d));
 
 function IroHandle(props) {
     var radius = props.r;
@@ -1206,6 +1052,124 @@ IroHandle.defaultProps = {
     props: { x: 0, y: 0 }
 };
 
+/**
+ * @desc Get the gradient stops for a slider
+ * @param props - slider props
+ * @param color
+ */
+function getSliderGradient(props, color) {
+    var hsv = color.hsv;
+    var rgb = color.rgb;
+    switch (props.sliderType) {
+        case 'red':
+            return [
+                [0, ("rgb(" + (0) + "," + (rgb.g) + "," + (rgb.b) + ")")],
+                [100, ("rgb(" + (255) + "," + (rgb.g) + "," + (rgb.b) + ")")] ];
+        case 'green':
+            return [
+                [0, ("rgb(" + (rgb.r) + "," + (0) + "," + (rgb.b) + ")")],
+                [100, ("rgb(" + (rgb.r) + "," + (255) + "," + (rgb.b) + ")")] ];
+        case 'blue':
+            return [
+                [0, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (0) + ")")],
+                [100, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (255) + ")")] ];
+        case 'alpha':
+            return [
+                [0, ("rgba(" + (rgb.r) + "," + (rgb.g) + "," + (rgb.b) + ",0)")],
+                [100, ("rgb(" + (rgb.r) + "," + (rgb.g) + "," + (rgb.b) + ")")] ];
+        case 'kelvin':
+            var stops = [];
+            var min = props.minTemperature;
+            var max = props.maxTemperature;
+            var numStops = 8;
+            var range = max - min;
+            for (var kelvin = min, stop = 0; kelvin < max; kelvin += range / numStops, stop += 1) {
+                var ref = IroColor.kelvinToRgb(kelvin);
+                var r = ref.r;
+                var g = ref.g;
+                var b = ref.b;
+                stops.push([100 / numStops * stop, ("rgb(" + r + "," + g + "," + b + ")")]);
+            }
+            return stops;
+        case 'hue':
+            return [
+                [0, '#f00'],
+                [16.666, '#ff0'],
+                [33.333, '#0f0'],
+                [50, '#0ff'],
+                [66.666, '#00f'],
+                [83.333, '#f0f'],
+                [100, '#f00'] ];
+        case 'saturation':
+            var noSat = { h: color.hsl.h, s: 0, l: color.hsl.l };
+            var fullSat = { h: color.hsl.h, s: 100, l: color.hsl.l };
+            return [
+                [0, ("hsl(" + (noSat.h) + "," + (noSat.s) + "%," + (noSat.l) + "%)")],
+                [100, ("hsl(" + (fullSat.h) + "," + (fullSat.s) + "%," + (fullSat.l) + "%)")]
+            ];
+        case 'value':
+        default:
+            var hsl = IroColor.hsvToHsl({ h: hsv.h, s: hsv.s, v: 100 });
+            return [
+                [0, '#000'],
+                [100, ("hsl(" + (hsl.h) + "," + (hsl.s) + "%," + (hsl.l) + "%)")]
+            ];
+    }
+}
+/**
+ * @desc Get the current slider value for a given color, as a percentage
+ * @param props - slider props
+ * @param color
+ */
+function getCurrentSliderValue(props, color) {
+    var hsva = color.hsva;
+    var rgb = color.rgb;
+    var hsl = color.hsl;
+    switch (props.sliderType) {
+        case 'red':
+            return rgb.r / 2.55;
+        case 'green':
+            return rgb.g / 2.55;
+        case 'blue':
+            return rgb.b / 2.55;
+        case 'alpha':
+            return hsva.a * 100;
+        case 'kelvin':
+            var minTemperature = props.minTemperature;
+    var maxTemperature = props.maxTemperature;
+            var temperatureRange = maxTemperature - minTemperature;
+            var percent = ((color.kelvin - minTemperature) / temperatureRange) * 100;
+            // clmap percentage
+            return Math.max(0, Math.min(percent, 100));
+        case 'hue':
+            return hsva.h /= 3.6;
+        case 'saturation':
+            return hsl.s;
+        case 'value':
+        default:
+            return hsva.v;
+    }
+}
+/**
+ * @desc Get the current handle position for a given color
+ * @param props - slider props
+ * @param color
+ */
+function getSliderHandlePosition(props, color) {
+    var ref = getSliderDimensions(props);
+    var width = ref.width;
+    var height = ref.height;
+    var handleRange = ref.handleRange;
+    var handleStart = ref.handleStart;
+    var ishorizontal = props.layoutDirection === 'horizontal';
+    var sliderValue = getCurrentSliderValue(props, color);
+    var midPoint = ishorizontal ? width / 2 : height / 2;
+    var handlePos = handleStart + (sliderValue / 100) * handleRange;
+    if (ishorizontal) {
+        handlePos = -1 * handlePos + handleRange + handleStart * 2;
+    }
+    return { x: ishorizontal ? midPoint : handlePos, y: ishorizontal ? handlePos : midPoint };
+}
 function IroSlider(props) {
     var activeIndex = props.activeIndex;
     var activeColor = (activeIndex !== undefined && activeIndex < props.colors.length) ? props.colors[activeIndex] : props.color;
@@ -1219,7 +1183,13 @@ function IroSlider(props) {
     function handleInput(x, y, type) {
         var value = getSliderValueFromInput(props, x, y);
         props.parent.inputActive = true;
-        activeColor[props.sliderType] = value;
+        var hsl = activeColor.hsl;
+        if (props.sliderType === "saturation") {
+            activeColor.hsl = { h: hsl.h, s: value, l: hsl.l };
+        }
+        else {
+            activeColor[props.sliderType] = value;
+        }
         props.onInput(type);
     }
     return (h(IroComponentBase, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (h("svg", Object.assign({}, rootProps, { className: "IroSlider", width: width, height: height, style: rootStyles }),
@@ -1299,6 +1269,25 @@ function IroBox(props) {
 }
 
 var HUE_STEPS = Array.apply(null, { length: 360 }).map(function (_, index) { return index; });
+/**
+ * @desc Get the current handle position for a given color
+ * @param props - wheel props
+ * @param color
+ */
+function getWheelHandlePosition(props, color) {
+    var hsl = color.hsl;
+    var ref = getWheelDimensions(props);
+    var cx = ref.cx;
+    var cy = ref.cy;
+    var handleRange = props.width / 2 - props.padding - props.handleRadius - props.borderWidth;
+    var handleAngle = (180 + translateWheelAngle(props, hsl.h, true)) * (Math.PI / 180);
+    var handleDist = (hsl.s / 100) * handleRange;
+    var direction = props.wheelDirection === 'clockwise' ? -1 : 1;
+    return {
+        x: cx + handleDist * Math.cos(handleAngle) * direction,
+        y: cy + handleDist * Math.sin(handleAngle) * direction,
+    };
+}
 function IroWheel(props) {
     var ref = getWheelDimensions(props);
     var width = ref.width;
@@ -1309,7 +1298,7 @@ function IroWheel(props) {
     var borderWidth = props.borderWidth;
     var colorPicker = props.parent;
     var activeColor = props.color;
-    var hsv = activeColor.hsv;
+    var hsl = activeColor.hsl;
     var handlePositions = colors.map(function (color) { return getWheelHandlePosition(props, color); });
     function handleInput(x, y, inputType) {
         if (inputType === 0 /* Start */) {
@@ -1322,14 +1311,15 @@ function IroWheel(props) {
             // If the input didn't hit a handle, set the currently active handle to that position
             else {
                 colorPicker.inputActive = true;
-                activeColor.hsv = getWheelValueFromInput(props, x, y);
+                activeColor.hsl = Object.assign({}, getWheelValueFromInput(props, x, y), {l: hsl.l});
                 props.onInput(inputType);
             }
         }
         // move is fired when the user has started dragging
         else if (inputType === 1 /* Move */) {
             colorPicker.inputActive = true;
-            activeColor.hsv = getWheelValueFromInput(props, x, y);
+            console.log(Object.assign({}, getWheelValueFromInput(props, x, y), {l: hsl.l}));
+            activeColor.hsl = Object.assign({}, getWheelValueFromInput(props, x, y), {l: hsl.l});
         }
         // let the color picker fire input:start, input:move or input:end events
         props.onInput(inputType);
@@ -1337,11 +1327,11 @@ function IroWheel(props) {
     return (h(IroComponentBase, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (h("svg", Object.assign({}, rootProps, { className: "IroWheel", width: width, height: width, style: rootStyles }),
         h("defs", null,
             h("radialGradient", { id: uid },
-                h("stop", { offset: "0%", "stop-color": "#fff" }),
+                h("stop", { offset: "0%", "stop-color": "#808080" }),
                 h("stop", { offset: "100%", "stop-color": "#fff", "stop-opacity": "0" }))),
         h("g", { className: "IroWheelHue", "stroke-width": radius, fill: "none" }, HUE_STEPS.map(function (angle) { return (h("path", { key: angle, d: getSvgArcPath(cx, cy, radius / 2, angle, angle + 1.5), stroke: ("hsl(" + (translateWheelAngle(props, angle)) + ", 100%, 50%)") })); })),
         h("circle", { className: "IroWheelSaturation", cx: cx, cy: cy, r: radius, fill: ("url(" + (resolveSvgUrl('#' + uid)) + ")") }),
-        props.wheelLightness && (h("circle", { className: "IroWheelLightness", cx: cx, cy: cy, r: radius, fill: "#000", opacity: 1 - hsv.v / 100 })),
+        props.wheelLightness && (h("circle", { className: "IroWheelLightness", cx: cx, cy: cy, r: radius, fill: "#000", opacity: 1 - hsl.l / 100 })),
         h("circle", { className: "IroWheelBorder", cx: cx, cy: cy, r: radius, fill: "none", stroke: props.borderColor, "stroke-width": borderWidth }),
         colors.filter(function (color) { return color !== activeColor; }).map(function (color) { return (h(IroHandle, { isActive: false, index: color.index, fill: color.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[color.index].x, y: handlePositions[color.index].y })); }),
         h(IroHandle, { isActive: true, index: activeColor.index, fill: activeColor.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[activeColor.index].x, y: handlePositions[activeColor.index].y }))); }));
@@ -1357,7 +1347,7 @@ function createWidget(WidgetComponent) {
         var widget; // will become an instance of the widget component class
         var widgetRoot = document.createElement('div');
         // Render widget into a temp DOM node
-        I(h(WidgetComponent, Object.assign({}, {ref: function (ref) { return widget = ref; }},
+        O(h(WidgetComponent, Object.assign({}, {ref: function (ref) { return widget = ref; }},
             props)), widgetRoot);
         function mountWidget() {
             var container = parent instanceof Element ? parent : document.querySelector(parent);
@@ -1644,7 +1634,7 @@ var IroColorPicker = /*@__PURE__*/(function (Component) {
     };
 
     return IroColorPicker;
-}(m));
+}(d));
 IroColorPicker.defaultProps = Object.assign({}, iroColorPickerOptionDefaults,
     {colors: [],
     display: 'block',
