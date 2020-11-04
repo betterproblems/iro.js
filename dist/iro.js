@@ -1324,7 +1324,6 @@
           // move is fired when the user has started dragging
           else if (inputType === 1 /* Move */) {
               colorPicker.inputActive = true;
-              console.log(Object.assign({}, getWheelValueFromInput(props, x, y), {l: hsl.l}));
               activeColor.hsl = Object.assign({}, getWheelValueFromInput(props, x, y), {l: hsl.l});
           }
           // let the color picker fire input:start, input:move or input:end events
